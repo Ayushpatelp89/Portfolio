@@ -13,15 +13,13 @@ const Navbar = () => {
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
-          e.preventDefault();
-          let elem = e.currentTarget as HTMLAnchorElement;
-          let section = elem.getAttribute("data-href");
-          if (section) {
-            const target = document.querySelector(section);
-            if (target) {
-              target.scrollIntoView({ behavior: "smooth" });
-            }
+        e.preventDefault();
+        let elem = e.currentTarget as HTMLAnchorElement;
+        let section = elem.getAttribute("data-href");
+        if (section) {
+          const target = document.querySelector(section);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth" });
           }
         }
       });
@@ -31,7 +29,7 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          Ayush
         </a>
         <a
           href={`mailto:${portfolioData.personalInfo.email}`}
