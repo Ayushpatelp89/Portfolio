@@ -58,6 +58,27 @@ export function initialFX() {
     }
   );
 
-  // Simple fade loop alternative
-  // LoopText(t2, t3); // This relied on invalid text splitting logic, removing for stability.
+  const t1 = document.querySelector(".landing-h2-info");
+  const t2 = document.querySelector(".landing-h2-info-1");
+  const t3 = document.querySelector(".landing-h2-1");
+  const t4 = document.querySelector(".landing-h2-2");
+
+  // Initial state: Show first, hide second
+  gsap.set([t2, t4], { opacity: 0 });
+  gsap.set([t1, t3], { opacity: 1 });
+
+  // Loop animation
+  const loop = (el1: Element | null, el2: Element | null) => {
+    if (!el1 || !el2) return;
+    const tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+    // Switch to el2
+    tl.to(el1, { opacity: 0, duration: 0.8 })
+      .to(el2, { opacity: 1, duration: 0.8 }, "<")
+      // Switch back to el1
+      .to(el1, { opacity: 1, duration: 0.8 }, "+=2")
+      .to(el2, { opacity: 0, duration: 0.8 }, "<");
+  };
+
+  loop(t1, t2);
+  loop(t3, t4);
 }
