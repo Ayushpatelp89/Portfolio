@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import styles from "./About.module.css";
 
 export default function About() {
@@ -40,22 +39,3 @@ export default function About() {
         </section>
     );
 }
-=======
-import "./styles/About.css";
-import { portfolioData } from "../data/portfolioData";
-
-const About = () => {
-  return (
-    <div className="about-section" id="about">
-      <div className="about-me">
-        <h3 className="title">{portfolioData.about.title}</h3>
-        <p className="para">
-          {portfolioData.about.description}
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default About;
->>>>>>> 6ab735ec238023f051ba3eba1036b4c938f175ce
