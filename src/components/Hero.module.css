@@ -1,0 +1,123 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10%;
+    background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroContent {
+    z-index: 2;
+    max-width: 800px;
+}
+
+.greeting {
+    font-family: var(--font-inter);
+    color: var(--accent-gold);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.title {
+    font-family: var(--font-playfair);
+    font-size: 5rem;
+    color: var(--text-light);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: var(--font-playfair);
+    font-size: 3.5rem;
+    color: var(--text-dim);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    max-width: 500px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.ctaButton {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background: transparent;
+    cursor: pointer;
+}
+
+.ctaButton:hover {
+    background: rgba(212, 175, 55, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Abstract Background Elements */
+.circle1,
+.circle2 {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+    opacity: 0.1;
+}
+
+.circle1 {
+    width: 400px;
+    height: 400px;
+    background: var(--accent-gold);
+    top: -100px;
+    right: -100px;
+    animation: float 10s infinite ease-in-out;
+}
+
+.circle2 {
+    width: 600px;
+    height: 600px;
+    background: #1d4ed8;
+    bottom: -200px;
+    left: -200px;
+    animation: float 15s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, 20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 0 5%;
+    }
+}
