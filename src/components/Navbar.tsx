@@ -13,10 +13,10 @@ const Navbar = () => {
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
-        e.preventDefault();
         let elem = e.currentTarget as HTMLAnchorElement;
         let section = elem.getAttribute("data-href");
         if (section) {
+          e.preventDefault();
           const target = document.querySelector(section);
           if (target) {
             target.scrollIntoView({ behavior: "smooth" });
@@ -39,6 +39,15 @@ const Navbar = () => {
           {portfolioData.personalInfo.email}
         </a>
         <ul>
+          <li>
+            <a
+              href={portfolioData.personalInfo.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <HoverLinks text="RESUME" />
+            </a>
+          </li>
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />

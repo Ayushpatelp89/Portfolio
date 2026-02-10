@@ -89,10 +89,9 @@ const WhatIDo = () => {
 
             <div className="what-content-in">
               <h3>DEVELOP</h3>
-              <h4>Description</h4>
+              <h4>FULL STACK & ALGORITHMS</h4>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-                quia aliquid laboriosam ducimus sit molestiae.
+                I build scalable full-stack applications and efficient algorithms. With a strong foundation in Java, C++, and Web Technologies, I develop responsive, user-centric solutions ranging from complex incident reporting systems to AI-powered safety bots.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -130,9 +129,9 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
             <div className="what-content-in">
               <h3>TOOLS & SOFT SKILLS</h3>
-              <h4>Description</h4>
+              <h4>LEADERSHIP & COLLABORATION</h4>
               <p>
-                Tools I use and my soft skills.
+                I utilize industry-standard tools like Git, MySQL, and VS Code to streamline development. My problem-solving mindset, honed through solving 500+ coding challenges, complements my ability to lead projects and collaborate effectively in team environments.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">

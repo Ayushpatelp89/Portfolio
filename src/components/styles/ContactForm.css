@@ -1,0 +1,86 @@
+.contact-form-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ccc;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 10px 0;
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: var(--accentColor);
+}
+
+.submit-btn {
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+}
+
+.submit-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-msg {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.status-msg.success {
+  color: #4caf50;
+}
+
+.status-msg.error {
+  color: #f44336;
+}
+
+@media only screen and (max-width: 900px) {
+  .contact-form-container {
+    margin-top: 40px;
+  }
+}
