@@ -10,6 +10,9 @@ const Career = () => {
           <br /> Certifications
         </h2>
         <div className="career-info">
+          <div className="career-profile-pic">
+            <img src={portfolioData.personalInfo.profilePic} alt="Profile" />
+          </div>
           <div className="career-timeline">
             <div className="career-dot"></div>
           </div>
@@ -22,7 +25,7 @@ const Career = () => {
                 </div>
                 <h3>{edu.period}</h3>
               </div>
-              <p>{edu.details} - {edu.location}</p>
+              <p>{edu.location}</p>
             </div>
           ))}
           <h2 style={{ marginTop: "50px" }}>Certifications</h2>

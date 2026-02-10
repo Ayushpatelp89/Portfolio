@@ -9,6 +9,7 @@ export const portfolioData = {
         twitter: "https://x.com", // Keeping placeholder
         instagram: "https://www.instagram.com/ayush_raj_patel/",
         resume: "https://drive.google.com/file/d/1ln0FOB8ceCRPje2yhm03-Bck_rBHudPj/view?usp=sharing",
+        profilePic: "/images/profile.png", // User to provide this file
     },
     about: {
         title: "About Me",
@@ -62,21 +63,18 @@ export const portfolioData = {
             institution: "Lovely Professional University",
             degree: "B.Tech - CSE",
             period: "Since August 2024",
-            details: "CGPA: 6.05",
             location: "Jalandhar, Punjab",
         },
         {
             institution: "Eklavya University",
             degree: "Intermediate",
             period: "April 2019 - June 2022",
-            details: "75%",
             location: "Damoh, Bhopal",
         },
         {
             institution: "Jesus and Mary Academy",
             degree: "Matriculation",
             period: "April 2017 - March 2019",
-            details: "63%",
             location: "Patna, Bihar",
         },
     ],
